@@ -1,0 +1,111 @@
+/* Genel Ayarlar ve Sıfırlama */
+body {
+    margin: 0;
+    padding: 0;
+    /* Erişilebilir bir koyu arka plan */
+    background-color: #121212; 
+    color: #f0f0f0; /* Yüksek kontrastlı açık yazı rengi */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column; /* İçeriğin yukarıdan aşağı akmasını sağlar */
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    position: relative; /* İmza için referans noktası */
+}
+
+.container {
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    /* İçeriğin yukarıdan başlamasını sağlamak için biraz boşluk */
+    margin-top: 50px; 
+    margin-bottom: 80px;
+}
+
+/* Ana Başlık Stili */
+.main-text {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    color: #ff69b4; /* Kadınlar Günü temasına uygun pembe tonu */
+}
+
+/* Kalp İkonu Stili */
+.heart-icon {
+    font-size: 6rem; 
+    color: #e30b5c; 
+    animation: pulse 1.5s infinite;
+    display: block; 
+    margin: 30px auto;
+}
+
+/* Kalp Animasyonu (Büyüyüp Küçülme) */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Yeni Bilgi Bölümü Stilleri */
+.info-statement, .contact-support {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #1e1e1e; 
+    border-radius: 10px;
+    border-left: 5px solid #ff69b4; /* Pembe vurgu */
+    text-align: left;
+}
+
+.info-statement h2, .contact-support h2 {
+    color: #ff69b4; 
+    font-size: 1.8rem;
+    margin-top: 0;
+    border-bottom: 2px solid #ff69b440;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.info-statement ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-statement ul li {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23ff69b4" class="bi bi-check-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.471 5.354 7.348a.75.75 0 0 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.08-.022l4.25-5.5a.75.75 0 0 0-.02-1.08z"/></svg>') no-repeat left center;
+    background-size: 16px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* İmza Stili (Sol Alta Sabitlenmiş) */
+.attribution {
+    position: fixed; /* Ekranda sabit kalmasını sağlar */
+    bottom: 15px; /* Alttan boşluk */
+    left: 15px; /* Soldan boşluk */
+    font-size: 0.8rem;
+    color: #999;
+    z-index: 1000; /* Diğer öğelerin üstünde görünmesini sağlar */
+}
+
+/* Küçük ekranlar için düzenleme */
+@media (max-width: 600px) {
+    .main-text {
+        font-size: 2.5rem;
+    }
+    .heart-icon {
+        font-size: 4rem;
+    }
+}
